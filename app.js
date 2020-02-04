@@ -5,7 +5,7 @@ const app = express()
 
 app.use('/:codigo', async (req, res) => {
   const codigo = req.params.codigo
-  console.log(codigo)
+  //   console.log(codigo)
   const track = await rastro.track(codigo)
   res.status(200).json(track)
 })

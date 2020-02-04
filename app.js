@@ -1,7 +1,7 @@
 const { rastro } = require('rastrojs')
 const express = require('express')
-const porta = 4000
 const app = express()
+const porta = process.env.PORT || 4000
 
 app.use('/:codigo', async (req, res) => {
   const codigo = req.params.codigo
